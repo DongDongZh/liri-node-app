@@ -19,7 +19,7 @@ var keys = require("./keys.js");
 //process.argv command line  
 var liriArgv = process.argv;
 var action = liriArgv[2];
-var value = liriArgv[3];
+var value = liriArgv.slice(3).join(" ");
 
 //switch case 
 switch (action) {
@@ -60,14 +60,18 @@ function spotifyMusic() {
     secret: keys.spotify.secret
   });
 
+  if (!value) {
+    value = "The Sign Ace of Base"
+  }
+
   spotify
     .search({ type: 'track', query: value, limit: 2 })
     .then(function (response) {
-      // console.log(response);
-      console.log("\n-----------------");
       var data = response.tracks.items[0];
+      // console.log(data);
+      console.log("\n-----------------");
       console.log("Artist: " + data.album.artists[0].name +
-        "\nThe Name of the Song: " + data.album.name +
+        "\nThe Name of the Song: " + data.name +
         "\nPreview Link: " + data.external_urls.spotify +
         "\nAlbum: " + data.album.name);
       console.log("-----------------")
@@ -81,6 +85,9 @@ debugger;
 
 // function movie() case "movie-this"
 function movie() {
+  if (!value) {
+    value = "Mr.Nobody"
+  }
   axios.get(" https://www.omdbapi.com/?apikey=604e2704&t=" + value)
     .then(function (response) {
       var data = response.data;
@@ -105,14 +112,14 @@ function movie() {
 
 // case "do-what-it-says"
 function what() {
-  fs.readFile("random.txt","UTF8",function(err,data){
-    if (err){
+  fs.readFile("random.txt", "UTF8", function (err, data) {
+    if (err) {
       return console.log(err)
     }
     // console.log(data); 
     var dataArr = data.split(",");
     // console.log(dataArr); 
-    action = dataArr[0]; 
+    action = dataArr[0];
     value = dataArr[1];
     switch (action) {
       case "concert-this":
@@ -130,3 +137,13 @@ function what() {
     };
   })
 };
+
+// Bonus: append each command to log.txt
+fs.appendFile("log.txt",action+","+value+"\n",function(err){
+  if (err){
+    console.log(err); 
+  }
+  else{
+    console.log("Content added to log.txt!");
+  }
+})
