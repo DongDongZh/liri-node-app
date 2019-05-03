@@ -30,7 +30,7 @@ By default, if there is no song provided, it will print out the information of t
 
 **Example command line: node liri.js spotify-this-song shake it off**
 
-![Image of the example: node liri.js spotify-this-song shake it off](assets/img2.png)
+![Image of the example: node liri.js spotify-this-song shake it off](assets/img2(update).png)
 
 
 `3. node liri.js movie-this '<movie name here>`
