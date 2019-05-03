@@ -15,7 +15,7 @@ This will return the following information in your terminal/bash window:
 
 **Example command line: node liri.js concert-this taylor swift**
 
-![Image of the example](./assets.img1.png)
+![Image of the example](assets.img1.png)
 
 
 `2.node liri.js spotify-this-song <song name here>`
