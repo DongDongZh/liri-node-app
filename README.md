@@ -1,4 +1,4 @@
-# lIRI-node-app
+# LIRI-node-app
 ## What is LIRI? 
  LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _**Language Interpretation and Recognition Interface**_. LIRI will be a command line node app that takes in parameters and gives you back data.
 ## How to use LIRI? 
@@ -13,7 +13,10 @@ This will return the following information in your terminal/bash window:
   >* Venue location 
   >* Date of the event 
 
-Example command line: node liri.js concert-this taylor swift
+**Example command line: node liri.js concert-this taylor swift**
+
+![Image of the example](./assets.img1.png)
+
 
 `2.node liri.js spotify-this-song <song name here>`
 
@@ -25,7 +28,7 @@ This will show the following information about the song in your terminal/bash wi
 
 By default, if there is no song provided, it will print out the information of the "The Sign" by Ace of Base.
 
-Example command line: node liri.js spotify-this-song shake it off 
+**Example command line: node liri.js spotify-this-song shake it off**
 
 `3. node liri.js movie-this '<movie name here>`
 
@@ -41,10 +44,12 @@ This will output the following information to your terminal/bash window:
 
 By default, if there is no movie provided,  the program will output data for the movie 'Mr. Nobody'.
 
-Example command line: node liri.js movie-this avatar 
+**Example command line: node liri.js movie-this avatar**
 
 `4.node liri.js do-what-it-says`
-This will read the text inside of random.txt and use it to call one of LIRI's commands. By default, the command is `spotify-this,"I Want it That Way"`. But you can change the command and value by editing text inside of the random.txt file.
+This will read the text inside of random.txt and use it to call one of LIRI's commands. By default, the command is `spotify-this,"I Want it That Way"`. 
+
+You can change the command and value by editing text inside of the random.txt file.
 
 ## One more thing...
 Every command you type in, the program will log the data to a .txt file called `log.txt`. It will serve as a log of all your past commands. 
