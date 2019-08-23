@@ -1,6 +1,13 @@
 # LIRI-node-app
+
+## Role & Contact Information
+Independent back-end web developer
+
+General inquiries at ddzhang2018@gmail.com.
+
 ## What is LIRI? 
  LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a _**Language Interpretation and Recognition Interface**_. LIRI will be a command line node app that takes in parameters and gives you back data.
+ 
 ## How to use LIRI? 
 As said before, LIRI will be a command line node app. So just open the terminal and type in `node liri.js`, followed by a command and any value that you want to search for. 
 
